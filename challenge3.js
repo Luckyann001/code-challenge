@@ -11,16 +11,19 @@ function runChallenge3() {
     let sha = calculateSHADeduction(basicSalary, benefits, tax);
     // Calculate NSSF deduction
     let nssf = calculateNSSFDeduction(basicSalary, benefits, organizationNSSF);
+    // Housing levy: 1.5% of gross income
+    let totalIncome = basicSalary + benefits;
+    let housingLevy = totalIncome * 0.015;
 
     // Calculate net pay
-    let totalIncome = basicSalary + benefits;
-    let netPay = totalIncome - tax - sha - nssf;
+    let netPay = totalIncome - tax - sha - nssf - housingLevy;
 
     // Display all results
     let resultText =
         'Tax: ' + tax + '\n' +
         'SHA Deduction: ' + sha + '\n' +
         'NSSF Deduction: ' + nssf + '\n' +
+        'Housing Levy: ' + housingLevy + '\n' +
         'Net Pay: ' + netPay;
     document.getElementById('result').textContent = resultText;
 }
