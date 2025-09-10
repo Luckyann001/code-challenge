@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>marks,speed,Payroll</h1>
+    <form id="challenge1Form" onsubmit="runChallenge1(); return false;">
+        <h2>Challenge 1</h2>
+        <input type="text" id="challenge1Input" placeholder="Enter marks">
+        <button type="submit">Run Challenge 1</button>
+    </form>
+    <form id="challenge2Form" onsubmit="runChallenge2(); return false;">
+        <h2>Challenge 2</h2>
+        <input type="text" id="challenge2Input" placeholder="Enter speed">
+        <button type="submit">Run Challenge 2</button>
+    </form>
+    <form id="challenge3Form" onsubmit="runChallenge3(); return false;">
+    <h2>Challenge 3</h2>
+    <input type="number" id="basicSalary" placeholder="Basic Salary">
+    <input type="number" id="benefits" placeholder="Benefits">
+    <input type="text" id="orgNSSF" placeholder="Alternative Pension Scheme? (yes/no)">
+    <button type="submit">Run Challenge 3</button>
+    </form>
+    <div id="result" style="margin-top:20px; font-weight:bold;"></div>
+</body>
+<script src="challenge1.js"></script>
+<script src="challenge2.js"></script>
+<script src="challenge3.js"></script>
+</html>
